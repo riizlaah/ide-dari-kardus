@@ -11928,6 +11928,17 @@
                         "",
                         "\"UI\""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
+                      },
+                      "parameters": [
+                        "NextNRepeat",
+                        "=",
+                        "\"Mulai Lagi\"",
+                        ""
+                      ]
                     }
                   ]
                 },
@@ -11968,24 +11979,6 @@
                     },
                     {
                       "type": {
-                        "value": "Cache"
-                      },
-                      "parameters": [
-                        "NextNRepeat"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "MettreX"
-                      },
-                      "parameters": [
-                        "Back",
-                        "=",
-                        "544"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "EcrireFichierTxt"
                       },
                       "parameters": [
@@ -12020,26 +12013,6 @@
                         "Text",
                         "=",
                         "\"Kamu Kalah\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PanelSpriteButton::PanelSpriteButton::SetLabelTextOp"
-                      },
-                      "parameters": [
-                        "NextNRepeat",
-                        "=",
-                        "\"Mulai Lagi\"",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "NextNRepeat",
-                        ""
                       ]
                     }
                   ]
@@ -12410,13 +12383,29 @@
           "depth": 1,
           "height": 736,
           "keepRatio": true,
-          "layer": "",
+          "layer": "Fade",
           "name": "Fade",
           "persistentUuid": "a5d855e3-c961-4c00-ab6e-dcd8533c1866",
           "width": 1280,
           "x": 0,
           "y": 0,
           "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Reward",
+          "persistentUuid": "632ad258-2ec8-4cdc-bb5a-50d49aa34617",
+          "width": 0,
+          "x": 1056,
+          "y": 32,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -12742,6 +12731,32 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Reward",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "Light Green Glossy Button",
+          "variables": [],
+          "effects": [
+            {
+              "effectType": "Glow",
+              "name": "Effect",
+              "doubleParameters": {
+                "distance": 20,
+                "innerStrength": 1,
+                "outerStrength": 4
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [],
+          "content": {
+            "LabelText": "Hadiah!"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -12773,6 +12788,9 @@
           },
           {
             "objectName": "Fade"
+          },
+          {
+            "objectName": "Reward"
           }
         ]
       },
@@ -12795,29 +12813,7 @@
                 "value": "Cache"
               },
               "parameters": [
-                "InfoTxt"
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "0.5"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "Fade",
-                "Tween",
-                "\"fadein\"",
-                "0",
-                "\"linear\"",
-                "0.5",
-                ""
+                "AboutTxt"
               ]
             }
           ],
@@ -12831,11 +12827,74 @@
                   },
                   "parameters": [
                     "\"player\"",
-                    "\"hasWon\""
+                    "\"haveWon\""
                   ]
                 }
               ],
-              "actions": []
+              "actions": [
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Reward",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "GroupExists"
+                  },
+                  "parameters": [
+                    "\"player\"",
+                    "\"haveWon\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Reward"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "Fade",
+                    "Tween",
+                    "\"fadein\"",
+                    "0",
+                    "\"linear\"",
+                    "0.5",
+                    ""
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -13045,6 +13104,38 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+              },
+              "parameters": [
+                "Reward",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Reward\"",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -13074,6 +13165,59 @@
               "width": 0
             }
           ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Fade",
+          "renderingType": "",
+          "visibility": false,
+          "cameras": [],
           "effects": [
             {
               "effectType": "Scene3D::HemisphereLight",
