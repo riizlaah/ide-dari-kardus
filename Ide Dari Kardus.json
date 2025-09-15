@@ -4536,7 +4536,7 @@
               "TypedText": ""
             }
           ],
-          "string": "Sedotan bisa dipakai untuk membuat bagian yang bisa diputar, seperti baling-baling atau bagian yang menyangga roda",
+          "string": "Sedotan bisa dipakai untuk membuat bagian yang bisa diputar, seperti baling-baling atau bagian yang menyangga rod",
           "font": "",
           "textAlignment": "left",
           "characterSize": 26,
@@ -4559,7 +4559,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Sedotan bisa dipakai untuk membuat bagian yang bisa diputar, seperti baling-baling atau bagian yang menyangga roda",
+            "text": "Sedotan bisa dipakai untuk membuat bagian yang bisa diputar, seperti baling-baling atau bagian yang menyangga rod",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -11237,7 +11237,7 @@
               "TypedText": ""
             }
           ],
-          "string": "Sedotan bisa dipakai untuk membuat bagian yang bisa diputar, seperti baling-baling atau bagian yang menyangga roda",
+          "string": "Sedotan bisa dipakai untuk membuat bagian yang bisa diputar, seperti baling-baling atau bagian yang menyangga rod",
           "font": "",
           "textAlignment": "left",
           "characterSize": 26,
@@ -11260,7 +11260,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Sedotan bisa dipakai untuk membuat bagian yang bisa diputar, seperti baling-baling atau bagian yang menyangga roda",
+            "text": "Sedotan bisa dipakai untuk membuat bagian yang bisa diputar, seperti baling-baling atau bagian yang menyangga rod",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -14687,8 +14687,8 @@
           "name": "Skip",
           "persistentUuid": "3ca42176-a62c-42d4-9fbe-0c1223fc2636",
           "width": 113,
-          "x": 1152,
-          "y": 690,
+          "x": 1120,
+          "y": 680,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -14707,7 +14707,7 @@
           "width": 1280,
           "x": 0,
           "y": 0,
-          "zOrder": 3,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
