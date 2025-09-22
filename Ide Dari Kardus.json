@@ -689,6 +689,30 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/05b0c1364a92b436b86ca819e66b63480d1bc2fb399f6c0cf8bffbf8199ccc2a_CantoraOne-Regular.ttf",
           "name": "CantoraOne-Regular.ttf"
         }
+      },
+      {
+        "file": "assets/IMG20250920144742-cropped.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\IMG20250920144742-cropped.jpg",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/IMG20250920161553.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\IMG20250920161553.jpg",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/IMG20250920161609.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\IMG20250920161609.jpg",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -13718,7 +13742,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "Reward",
+          "name": "Epilog",
           "persistentUuid": "632ad258-2ec8-4cdc-bb5a-50d49aa34617",
           "width": 0,
           "x": 1056,
@@ -13953,7 +13977,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Nama Game: \"Ide dari Kardus\"\nPembuat: Naf'an Rizkilah\ndengan GDevelop 5 dan Aseprite\n\nXI RPL 1,\nSMK N 1 Kandeman, Tahun 2025",
+          "string": "Nama Game: \"Ide dari Kardus\"\nPembuat: Naf'an Rizkilah\nmemakai GDevelop 5 dan Aseprite\n\nXI RPL 1,\nSMK N 1 Kandeman, Tahun 2025",
           "font": "",
           "textAlignment": "left",
           "characterSize": 32,
@@ -13976,7 +14000,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Nama Game: \"Ide dari Kardus\"\nPembuat: Naf'an Rizkilah\ndengan GDevelop 5 dan Aseprite\n\nXI RPL 1,\nSMK N 1 Kandeman, Tahun 2025",
+            "text": "Nama Game: \"Ide dari Kardus\"\nPembuat: Naf'an Rizkilah\nmemakai GDevelop 5 dan Aseprite\n\nXI RPL 1,\nSMK N 1 Kandeman, Tahun 2025",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -14052,7 +14076,7 @@
         },
         {
           "assetStoreId": "",
-          "name": "Reward",
+          "name": "Epilog",
           "type": "PanelSpriteButton::PanelSpriteButton",
           "variant": "Light Green Glossy Button",
           "variables": [],
@@ -14073,7 +14097,7 @@
           ],
           "behaviors": [],
           "content": {
-            "LabelText": "Hadiah!"
+            "LabelText": "Epilog"
           }
         }
       ],
@@ -14108,7 +14132,7 @@
             "objectName": "Fade"
           },
           {
-            "objectName": "Reward"
+            "objectName": "Epilog"
           }
         ]
       },
@@ -14155,7 +14179,7 @@
                     "value": "Montre"
                   },
                   "parameters": [
-                    "Reward",
+                    "Epilog",
                     ""
                   ]
                 }
@@ -14181,7 +14205,7 @@
                     "value": "Cache"
                   },
                   "parameters": [
-                    "Reward"
+                    "Epilog"
                   ]
                 }
               ]
@@ -14228,6 +14252,17 @@
                 "BG",
                 "=",
                 "50*TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Epilog",
+                "Opacity",
+                "=",
+                "230 + sin(TimeFromStart() * 4) * 20"
               ]
             }
           ]
@@ -14431,7 +14466,7 @@
                 "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
               },
               "parameters": [
-                "Reward",
+                "Epilog",
                 ""
               ]
             },
@@ -14449,7 +14484,7 @@
               },
               "parameters": [
                 "",
-                "\"Reward\"",
+                "\"Epilog\"",
                 ""
               ]
             }
@@ -15157,15 +15192,15 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Reward",
-      "name": "Reward",
+      "mangledName": "Epilog",
+      "name": "Epilog",
       "r": 209,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridType": "rectangular",
         "gridWidth": 32,
         "gridHeight": 32,
@@ -15173,12 +15208,18 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": true,
+        "snap": false,
         "zoomFactor": 0.546875,
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "currImg",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -15216,14 +15257,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 128,
+          "height": 96,
           "keepRatio": true,
           "layer": "",
           "name": "YouWon",
           "persistentUuid": "0b9b6cb8-5389-44e7-8ec6-67585695a0f3",
-          "width": 448,
-          "x": 416,
-          "y": 128,
+          "width": 352,
+          "x": 448,
+          "y": 24,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -15268,27 +15309,102 @@
           "keepRatio": true,
           "layer": "",
           "name": "Sparks",
-          "persistentUuid": "b4c2065d-4a1b-4a68-b992-18217d6e2449",
+          "persistentUuid": "0f7eb239-465c-490e-af37-6c938cadc22b",
           "width": 0,
-          "x": 416,
-          "y": 736,
+          "x": 645,
+          "y": 729,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
-          "angle": -90,
-          "customSize": false,
-          "height": 0,
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 375,
           "keepRatio": true,
           "layer": "",
-          "name": "Sparks",
-          "persistentUuid": "0f7eb239-465c-490e-af37-6c938cadc22b",
-          "width": 0,
-          "x": 864,
-          "y": 736,
-          "zOrder": 5,
+          "name": "MultiCard",
+          "persistentUuid": "2a8a3aab-dda5-4c4a-b7ff-92f6114d60fa",
+          "width": 500,
+          "x": 113,
+          "y": 163,
+          "zOrder": 6,
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 0
+            }
+          ],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 278,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Pesan",
+          "persistentUuid": "1eba102e-105d-4d48-890b-2627b4fbe524",
+          "width": 323,
+          "x": 819,
+          "y": 125,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 360,
+          "keepRatio": true,
+          "layer": "",
+          "name": "BubbleChat",
+          "persistentUuid": "0cd19280-b219-4049-bf83-d12996a6f3e2",
+          "width": 360,
+          "x": 794,
+          "y": 106,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 186.66666666666663,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Alex",
+          "persistentUuid": "c24dc67c-da03-4d20-a028-f31272a917a3",
+          "width": 140,
+          "x": 901,
+          "y": 461,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 39,
+          "keepRatio": true,
+          "layer": "",
+          "name": "ClickMe",
+          "opacity": 128,
+          "persistentUuid": "21e9f2fa-9923-4567-ad47-937f7d07ca32",
+          "width": 98,
+          "x": 130,
+          "y": 176,
+          "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -15375,7 +15491,7 @@
           "string": "Selamat!\nKamu Menang!",
           "font": "assets\\LuckiestGuy.ttf",
           "textAlignment": "center",
-          "characterSize": 48,
+          "characterSize": 40,
           "color": {
             "b": 255,
             "g": 255,
@@ -15399,7 +15515,7 @@
             "font": "assets\\LuckiestGuy.ttf",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
-            "characterSize": 48,
+            "characterSize": 40,
             "lineHeight": 0,
             "color": "255;255;255"
           }
@@ -15450,6 +15566,386 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "MultiCard",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 0,
+                "thickness": 5
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\IMG20250920144742-cropped.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3120,
+                            "y": 0
+                          },
+                          {
+                            "x": 3120,
+                            "y": 2340
+                          },
+                          {
+                            "x": 0,
+                            "y": 2340
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\IMG20250920161609.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3120,
+                            "y": 0
+                          },
+                          {
+                            "x": 3120,
+                            "y": 2340
+                          },
+                          {
+                            "x": 0,
+                            "y": 2340
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\IMG20250920161553.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3120,
+                            "y": 0
+                          },
+                          {
+                            "x": 3120,
+                            "y": 2340
+                          },
+                          {
+                            "x": 0,
+                            "y": 2340
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Pesan",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Selamat berkreasi!\nterkadang hal yang kamu anggap remeh memiliki nilai yang tidak kamu ketahui...\nStay curious and creative!\n(tetaplah penasaran dan kreatif!)",
+          "font": "assets\\KodeMono-Regular.ttf",
+          "textAlignment": "left",
+          "characterSize": 26,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Selamat berkreasi!\nterkadang hal yang kamu anggap remeh memiliki nilai yang tidak kamu ketahui...\nStay curious and creative!\n(tetaplah penasaran dan kreatif!)",
+            "font": "assets\\KodeMono-Regular.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 26,
+            "lineHeight": 0,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Alex",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\alex.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 2
+                          },
+                          {
+                            "x": 20,
+                            "y": 2
+                          },
+                          {
+                            "x": 20,
+                            "y": 32
+                          },
+                          {
+                            "x": 4,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "BubbleChat",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\bubble-chat0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 48,
+                            "y": 0
+                          },
+                          {
+                            "x": 48,
+                            "y": 48
+                          },
+                          {
+                            "x": 0,
+                            "y": 48
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "ClickMe",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Klik ini",
+          "font": "CantoraOne-Regular.ttf",
+          "textAlignment": "left",
+          "characterSize": 32,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 5,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Klik ini",
+            "font": "CantoraOne-Regular.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 32,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -15466,6 +15962,21 @@
           },
           {
             "objectName": "YouWon"
+          },
+          {
+            "objectName": "MultiCard"
+          },
+          {
+            "objectName": "Pesan"
+          },
+          {
+            "objectName": "Alex"
+          },
+          {
+            "objectName": "BubbleChat"
+          },
+          {
+            "objectName": "ClickMe"
           }
         ]
       },
@@ -15492,6 +16003,17 @@
                 "YouWon",
                 "sin(TimeFromStart() * 8) * 40",
                 "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "ClickMe",
+                "Opacity",
+                "=",
+                "sin(TimeFromStart() * 6) * 100"
               ]
             }
           ]
@@ -15524,6 +16046,94 @@
                 "",
                 "\"MainMenu\"",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "MultiCard",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "HasAnyTouchOrMouseStarted"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "MultiCard",
+                "=",
+                "140"
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+              },
+              "parameters": [
+                "MultiCard",
+                "Tween",
+                "\"mv_down\"",
+                "170",
+                "\"linear\"",
+                "0.5",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "currImg",
+                "=",
+                "mod(currImg+ 1, 3)"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+              },
+              "parameters": [
+                "MultiCard",
+                "Animation",
+                "=",
+                "currImg"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetSize"
+              },
+              "parameters": [
+                "MultiCard",
+                "Resizable",
+                "500",
+                "375"
               ]
             }
           ]
@@ -15597,6 +16207,10 @@
       ],
       "behaviorsSharedData": [
         {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
           "name": "Effect",
           "type": "EffectCapability::EffectBehavior"
         },
@@ -15619,6 +16233,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ]
     },
