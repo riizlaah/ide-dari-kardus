@@ -1963,7 +1963,7 @@
             {
               "name": "desc",
               "type": "string",
-              "value": "Cutter dipakai untuk memotong bagian suatu bahan"
+              "value": "Gunting dipakai untuk memotong bagian suatu bahan"
             }
           ],
           "effects": [
@@ -8715,7 +8715,7 @@
             {
               "name": "desc",
               "type": "string",
-              "value": "Cutter dipakai untuk memotong bagian suatu bahan"
+              "value": "Gunting dipakai untuk memotong bagian suatu bahan"
             }
           ],
           "effects": [
