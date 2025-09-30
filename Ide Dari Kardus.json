@@ -1,7 +1,7 @@
 {
   "firstLayout": "Intro",
   "gdVersion": {
-    "build": 240,
+    "build": 242,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -102,98 +102,10 @@
         "userAdded": false
       },
       {
-        "file": "assets/card_back.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/card_back.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "file": "assets/card_blowfish.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/card_blowfish.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/card_crab.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/card_crab.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/card_seahorse.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/card_seahorse.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "file": "assets/card_snail.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/card_snail.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "file": "assets/card_seagrass.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/card_seagrass.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "file": "assets/card_coral.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/card_coral.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "file": "assets/card_anemone.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/card_anemone.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "file": "assets/card_plasticbag.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/card_plasticbag.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "file": "assets/board.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/board.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
         "file": "assets/LuckiestGuy.ttf",
         "kind": "font",
         "metadata": "",
         "name": "fonts/LuckiestGuy.ttf",
-        "userAdded": true
-      },
-      {
-        "file": "assets/background.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images/background.png",
-        "smoothed": true,
         "userAdded": true
       },
       {
@@ -250,14 +162,6 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/card_back2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images\\card_back.png",
-        "smoothed": true,
         "userAdded": true
       },
       {
@@ -720,6 +624,16 @@
         "metadata": "",
         "name": "assets\\bootsplash.png",
         "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Kevin Macleod - Bossa Antigua.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\Kevin Macleod - Bossa Antigua.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": false
       }
     ],
@@ -5096,6 +5010,18 @@
               "actions": [
                 {
                   "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Kevin Macleod - Bossa Antigua.ogg",
+                    "yes",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ShowLayer"
                   },
                   "parameters": [
@@ -5861,7 +5787,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Other",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6227,6 +6152,14 @@
                     "False",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "Pause"
+                  ]
                 }
               ],
               "actions": [
@@ -6247,6 +6180,14 @@
                     "isPaused",
                     "True",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Pause"
                   ]
                 }
               ]
@@ -6302,6 +6243,15 @@
                     "False",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Pause",
+                    ""
+                  ]
                 }
               ]
             },
@@ -6338,6 +6288,15 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "UnloadSound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Kevin Macleod - Bossa Antigua.ogg"
+                  ]
+                },
                 {
                   "type": {
                     "value": "Scene"
@@ -6385,6 +6344,15 @@
               "actions": [
                 {
                   "type": {
+                    "value": "UnloadSound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Kevin Macleod - Bossa Antigua.ogg"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Scene"
                   },
                   "parameters": [
@@ -6414,9 +6382,28 @@
                   "parameters": [
                     "Skip"
                   ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "LayerVisible"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Pause\""
+                  ]
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "UnloadSound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Kevin Macleod - Bossa Antigua.ogg"
+                  ]
+                },
                 {
                   "type": {
                     "value": "Scene"
@@ -6437,7 +6424,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Game over",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6497,7 +6483,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6559,6 +6544,15 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "UnloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\Kevin Macleod - Bossa Antigua.ogg"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "Scene"
                       },
                       "parameters": [
@@ -6584,6 +6578,15 @@
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "value": "UnloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "assets\\Kevin Macleod - Bossa Antigua.ogg"
+                      ]
+                    },
                     {
                       "type": {
                         "value": "Scene"
@@ -6621,6 +6624,15 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "UnloadSound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Kevin Macleod - Bossa Antigua.ogg"
+                  ]
+                },
                 {
                   "type": {
                     "value": "PlaySound"
@@ -11850,6 +11862,18 @@
               "actions": [
                 {
                   "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Kevin Macleod - Bossa Antigua.ogg",
+                    "yes",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ShowLayer"
                   },
                   "parameters": [
@@ -12944,6 +12968,14 @@
                     "",
                     "\"Pause\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "Pause"
+                  ]
                 }
               ],
               "actions": [
@@ -12964,6 +12996,14 @@
                     "isPaused",
                     "True",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Pause"
                   ]
                 }
               ]
@@ -13009,6 +13049,15 @@
                     "False",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Pause",
+                    ""
+                  ]
                 }
               ]
             },
@@ -13035,6 +13084,15 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "UnloadSound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Kevin Macleod - Bossa Antigua.ogg"
+                  ]
+                },
                 {
                   "type": {
                     "value": "Scene"
@@ -13070,6 +13128,15 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "UnloadSound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Kevin Macleod - Bossa Antigua.ogg"
+                  ]
+                },
                 {
                   "type": {
                     "value": "Scene"
@@ -13183,6 +13250,15 @@
                 },
                 {
                   "type": {
+                    "value": "UnloadSound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Kevin Macleod - Bossa Antigua.ogg"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Scene"
                   },
                   "parameters": [
@@ -13234,6 +13310,15 @@
                   },
                   "parameters": [
                     "0.1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "UnloadSound"
+                  },
+                  "parameters": [
+                    "",
+                    "assets\\Kevin Macleod - Bossa Antigua.ogg"
                   ]
                 },
                 {
@@ -14269,6 +14354,18 @@
               "parameters": [
                 "AboutTxt"
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets\\Kevin Macleod - Bossa Antigua.ogg",
+                "yes",
+                "",
+                ""
+              ]
             }
           ],
           "events": [
@@ -14395,6 +14492,15 @@
           "actions": [
             {
               "type": {
+                "value": "UnloadSound"
+              },
+              "parameters": [
+                "",
+                "assets\\Kevin Macleod - Bossa Antigua.ogg"
+              ]
+            },
+            {
+              "type": {
                 "value": "Scene"
               },
               "parameters": [
@@ -14419,6 +14525,15 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "UnloadSound"
+              },
+              "parameters": [
+                "",
+                "assets\\Kevin Macleod - Bossa Antigua.ogg"
+              ]
+            },
             {
               "type": {
                 "value": "Quit"
@@ -16351,6 +16466,33 @@
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "assets\\Kevin Macleod - Bossa Antigua.ogg",
+                "yes",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
@@ -16406,6 +16548,15 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "UnloadSound"
+              },
+              "parameters": [
+                "",
+                "assets\\Kevin Macleod - Bossa Antigua.ogg"
+              ]
+            },
             {
               "type": {
                 "value": "Scene"
