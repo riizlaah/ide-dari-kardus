@@ -1,7 +1,7 @@
 {
   "firstLayout": "Intro",
   "gdVersion": {
-    "build": 242,
+    "build": 247,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -81,6 +81,7 @@
     "authorUsernames": [],
     "categories": [],
     "playableDevices": [
+      "mobile",
       "mobile"
     ],
     "extensionProperties": [],
@@ -636,8 +637,7 @@
         "preloadInCache": false,
         "userAdded": false
       }
-    ],
-    "resourceFolders": []
+    ]
   },
   "objects": [],
   "objectsFolderStructure": {
@@ -667,13 +667,16 @@
         "gridType": "rectangular",
         "gridWidth": 16,
         "gridHeight": 16,
+        "gridDepth": 32,
         "gridOffsetX": 0,
         "gridOffsetY": 0,
+        "gridOffsetZ": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
         "zoomFactor": 0.7349696079908468,
-        "windowMask": false
+        "windowMask": false,
+        "selectedLayer": ""
       },
       "objectsGroups": [
         {
@@ -6844,6 +6847,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 0.1,
@@ -6872,6 +6876,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -6925,6 +6930,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 0.1,
@@ -6942,6 +6948,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 0.1,
@@ -6959,6 +6966,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -7079,13 +7087,16 @@
         "gridType": "rectangular",
         "gridWidth": 16,
         "gridHeight": 16,
+        "gridDepth": 32,
         "gridOffsetX": 0,
         "gridOffsetY": 0,
+        "gridOffsetZ": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
         "zoomFactor": 0.5636959571958565,
-        "windowMask": false
+        "windowMask": false,
+        "selectedLayer": ""
       },
       "objectsGroups": [
         {
@@ -9292,23 +9303,6 @@
                     },
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "assets\\panel2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 160,
-                        "y": 160
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
                       "image": "assets\\panel3.png",
                       "points": [],
                       "originPoint": {
@@ -9344,23 +9338,6 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets\\panel5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 160,
-                        "y": 160
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets\\panel6.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -12047,7 +12024,6 @@
                   "comment": "The second card has been revealed, wait a moment and turn cards again"
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12140,6 +12116,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -12379,7 +12356,7 @@
                           "parameters": [
                             "errCount",
                             "=",
-                            "min(errCount + 1, 23)"
+                            "min(errCount + 1, 10)"
                           ]
                         }
                       ]
@@ -12394,7 +12371,7 @@
                           "parameters": [
                             "errCount",
                             "=",
-                            "23"
+                            "10"
                           ]
                         }
                       ],
@@ -12421,7 +12398,7 @@
                           "parameters": [
                             "errCount",
                             ">=",
-                            "18"
+                            "8"
                           ]
                         }
                       ],
@@ -12447,7 +12424,7 @@
                           "parameters": [
                             "errCount",
                             "<",
-                            "18"
+                            "8"
                           ]
                         }
                       ],
@@ -12474,7 +12451,7 @@
                           "parameters": [
                             "Board",
                             "=",
-                            "floor(errCount / 3)"
+                            "floor(errCount / 2)"
                           ]
                         }
                       ]
@@ -12496,7 +12473,6 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -13340,15 +13316,50 @@
                         "=",
                         "\"Kamu Menang\""
                       ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "currLevel",
+                            "<",
+                            "15"
+                          ]
+                        }
+                      ],
+                      "actions": []
                     },
                     {
-                      "type": {
-                        "value": "EcrireFichierTxt"
-                      },
-                      "parameters": [
-                        "\"player\"",
-                        "\"haveWon\"",
-                        "\"yes\""
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "currLevel",
+                            "=",
+                            "15"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "EcrireFichierTxt"
+                          },
+                          "parameters": [
+                            "\"player\"",
+                            "\"haveWon\"",
+                            "\"yes\""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -13392,6 +13403,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 0.1,
@@ -13420,6 +13432,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -13473,6 +13486,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 0.1,
@@ -13490,6 +13504,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 0.1,
@@ -13507,6 +13522,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -13627,13 +13643,16 @@
         "gridType": "rectangular",
         "gridWidth": 32,
         "gridHeight": 32,
+        "gridDepth": 32,
         "gridOffsetX": 0,
         "gridOffsetY": 0,
+        "gridOffsetZ": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
         "zoomFactor": 0.5290357402156837,
-        "windowMask": false
+        "windowMask": false,
+        "selectedLayer": ""
       },
       "objectsGroups": [],
       "variables": [
@@ -14601,6 +14620,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -14665,6 +14685,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -15348,6 +15369,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -15412,6 +15434,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -15465,6 +15488,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -16541,6 +16565,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -17742,6 +17767,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -17806,6 +17832,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -19378,6 +19405,7 @@
               "ambientLightColorB": 200,
               "ambientLightColorG": 200,
               "ambientLightColorR": 200,
+              "camera2DPlaneMaxDrawingDistance": 5000,
               "camera3DFarPlaneDistance": 10000,
               "camera3DFieldOfView": 45,
               "camera3DNearPlaneDistance": 3,
@@ -19437,6 +19465,7 @@
               "initialVariables": []
             }
           ],
+          "editionSettings": {},
           "eventsFunctions": [
             {
               "fullName": "",
@@ -20860,6 +20889,7 @@
                   "ambientLightColorB": 200,
                   "ambientLightColorG": 200,
                   "ambientLightColorR": 200,
+                  "camera2DPlaneMaxDrawingDistance": 5000,
                   "camera3DFarPlaneDistance": 10000,
                   "camera3DFieldOfView": 45,
                   "camera3DNearPlaneDistance": 3,
@@ -20919,7 +20949,8 @@
                   "stringProperties": [],
                   "initialVariables": []
                 }
-              ]
+              ],
+              "editionSettings": {}
             },
             {
               "areaMaxX": 256,
@@ -21172,6 +21203,7 @@
                   "ambientLightColorB": 200,
                   "ambientLightColorG": 200,
                   "ambientLightColorR": 200,
+                  "camera2DPlaneMaxDrawingDistance": 5000,
                   "camera3DFarPlaneDistance": 10000,
                   "camera3DFieldOfView": 45,
                   "camera3DNearPlaneDistance": 3,
@@ -21231,7 +21263,8 @@
                   "stringProperties": [],
                   "initialVariables": []
                 }
-              ]
+              ],
+              "editionSettings": {}
             },
             {
               "areaMaxX": 197,
@@ -21476,6 +21509,7 @@
                   "ambientLightColorB": 200,
                   "ambientLightColorG": 200,
                   "ambientLightColorR": 200,
+                  "camera2DPlaneMaxDrawingDistance": 5000,
                   "camera3DFarPlaneDistance": 10000,
                   "camera3DFieldOfView": 45,
                   "camera3DNearPlaneDistance": 3,
@@ -21533,7 +21567,8 @@
                   "stringProperties": [],
                   "initialVariables": []
                 }
-              ]
+              ],
+              "editionSettings": {}
             },
             {
               "areaMaxX": 256,
@@ -21788,6 +21823,7 @@
                   "ambientLightColorB": 200,
                   "ambientLightColorG": 200,
                   "ambientLightColorR": 200,
+                  "camera2DPlaneMaxDrawingDistance": 5000,
                   "camera3DFarPlaneDistance": 10000,
                   "camera3DFieldOfView": 45,
                   "camera3DNearPlaneDistance": 3,
@@ -21847,7 +21883,8 @@
                   "stringProperties": [],
                   "initialVariables": []
                 }
-              ]
+              ],
+              "editionSettings": {}
             },
             {
               "areaMaxX": 192,
@@ -22102,6 +22139,7 @@
                   "ambientLightColorB": 200,
                   "ambientLightColorG": 200,
                   "ambientLightColorR": 200,
+                  "camera2DPlaneMaxDrawingDistance": 5000,
                   "camera3DFarPlaneDistance": 10000,
                   "camera3DFieldOfView": 45,
                   "camera3DNearPlaneDistance": 3,
@@ -22161,7 +22199,8 @@
                   "stringProperties": [],
                   "initialVariables": []
                 }
-              ]
+              ],
+              "editionSettings": {}
             }
           ]
         }
