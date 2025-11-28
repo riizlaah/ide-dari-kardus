@@ -644,7 +644,13 @@
     "folderName": "__ROOT"
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "currLevel",
+      "type": "number",
+      "value": 15
+    }
+  ],
   "layouts": [
     {
       "b": 149,
@@ -7069,7 +7075,7 @@
       "title": "",
       "v": 133,
       "uiSettings": {
-        "grid": false,
+        "grid": true,
         "gridType": "rectangular",
         "gridWidth": 16,
         "gridHeight": 16,
@@ -7077,8 +7083,8 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": false,
-        "zoomFactor": 0.710994634239028,
+        "snap": true,
+        "zoomFactor": 0.5636959571958565,
         "windowMask": false
       },
       "objectsGroups": [
@@ -7173,6 +7179,11 @@
           "name": "isPaused",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "cardCount",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -7215,7 +7226,7 @@
           "persistentUuid": "7d0b8f51-9ae8-4206-acf5-286e00c5d06b",
           "width": 0,
           "x": -112,
-          "y": -16,
+          "y": 32,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -7230,7 +7241,7 @@
           "persistentUuid": "52dee945-77b2-4157-8dad-92cd2743138b",
           "width": 0,
           "x": -176,
-          "y": -16,
+          "y": 32,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -7245,7 +7256,7 @@
           "persistentUuid": "fbebb30b-2842-47ca-b9f5-1d0a27d82035",
           "width": 0,
           "x": -112,
-          "y": 48,
+          "y": 96,
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
@@ -7260,7 +7271,7 @@
           "persistentUuid": "37bb09d8-808b-4156-a22f-49a3d409875b",
           "width": 0,
           "x": -176,
-          "y": 48,
+          "y": 96,
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
@@ -7275,7 +7286,7 @@
           "persistentUuid": "d8104d4e-eff5-487a-9354-694a69d601bd",
           "width": 0,
           "x": -112,
-          "y": 112,
+          "y": 160,
           "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
@@ -7290,7 +7301,7 @@
           "persistentUuid": "39dfbd14-94a4-4a0a-838c-7363415d9a75",
           "width": 0,
           "x": -176,
-          "y": 112,
+          "y": 160,
           "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
@@ -7305,7 +7316,7 @@
           "persistentUuid": "42ff69ec-5b46-4786-a843-9ccee3642c2b",
           "width": 0,
           "x": -112,
-          "y": 240,
+          "y": 288,
           "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
@@ -7320,7 +7331,7 @@
           "persistentUuid": "71e365e8-bbea-4c10-b9fe-72bec05c0772",
           "width": 0,
           "x": -176,
-          "y": 240,
+          "y": 288,
           "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
@@ -7335,7 +7346,7 @@
           "persistentUuid": "b196fbe5-ebf8-46a3-850e-068b6f8d8d2e",
           "width": 0,
           "x": -112,
-          "y": 304,
+          "y": 352,
           "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
@@ -7350,7 +7361,7 @@
           "persistentUuid": "b5a6949d-8e80-469d-a905-61dfb32861ad",
           "width": 0,
           "x": -176,
-          "y": 304,
+          "y": 352,
           "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
@@ -7365,7 +7376,7 @@
           "persistentUuid": "4e5ea1db-8b88-4357-b030-bb4dcecd445d",
           "width": 0,
           "x": -112,
-          "y": 368,
+          "y": 416,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -7380,248 +7391,8 @@
           "persistentUuid": "aa2ffb6f-1fc2-4e9e-80c6-72b316b09263",
           "width": 0,
           "x": -176,
-          "y": 368,
+          "y": 416,
           "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "5e3027f4-e8a2-452a-b847-a7c6d3ec738b",
-          "width": 0,
-          "x": 1008,
-          "y": 448,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "47ac2758-9259-498c-8bd1-c1c86bc138de",
-          "width": 0,
-          "x": 816,
-          "y": 448,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "3fe285b2-5f38-41b7-a8b4-caf1835d3ded",
-          "width": 0,
-          "x": 880,
-          "y": 448,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "094011e3-5c4e-4bc6-aa32-71ba31209dee",
-          "width": 0,
-          "x": 944,
-          "y": 448,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "4870a5f8-b384-4aa2-b939-4b501f3663d2",
-          "width": 0,
-          "x": 1008,
-          "y": 256,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "53bda5e1-a31d-4fcf-af3f-c310974f6ebb",
-          "width": 0,
-          "x": 816,
-          "y": 256,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "5dc06b59-d076-4530-b1c5-45823ff3f49f",
-          "width": 0,
-          "x": 880,
-          "y": 256,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "0766a2bc-785c-416b-ba19-8f9c9d37356c",
-          "width": 0,
-          "x": 944,
-          "y": 256,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "5c81bc30-7f89-43a6-9df7-2d2ee993eca2",
-          "width": 0,
-          "x": 1008,
-          "y": 320,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "2970941a-67b0-44ba-af99-eeae921df908",
-          "width": 0,
-          "x": 816,
-          "y": 320,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "6f8ea86d-459b-46e4-8df1-008f5d05f470",
-          "width": 0,
-          "x": 880,
-          "y": 320,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "88a3fba5-9b89-4238-b249-791a45d98130",
-          "width": 0,
-          "x": 944,
-          "y": 320,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "75b536be-063d-45b3-8ae3-0abb733cf80e",
-          "width": 0,
-          "x": 1008,
-          "y": 384,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "4b6ff847-bb59-46ab-91af-d6c7755b5eb7",
-          "width": 0,
-          "x": 816,
-          "y": 384,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "0b39abae-b907-44cb-9d57-9e9112948305",
-          "width": 0,
-          "x": 880,
-          "y": 384,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "0ffcdfb0-7f47-4ee2-8ce1-c80468480816",
-          "width": 0,
-          "x": 944,
-          "y": 384,
-          "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7631,12 +7402,13 @@
           "customSize": true,
           "depth": 1.009049773755656,
           "height": 460,
+          "keepRatio": true,
           "layer": "",
           "name": "Board",
           "persistentUuid": "b2f7e60e-7601-4707-b7af-1eae09f6bfcc",
           "width": 460,
-          "x": 745,
-          "y": 155,
+          "x": 970,
+          "y": 410,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -7734,7 +7506,7 @@
           "persistentUuid": "d70c9e54-e8d5-4b9e-950d-3159f929d406",
           "width": 0,
           "x": -176,
-          "y": -80,
+          "y": -32,
           "zOrder": 24,
           "numberProperties": [],
           "stringProperties": [],
@@ -7750,7 +7522,7 @@
           "persistentUuid": "e7707f79-bf9f-4db9-8684-daadaea2a1ab",
           "width": 0,
           "x": -112,
-          "y": -80,
+          "y": -32,
           "zOrder": 24,
           "numberProperties": [],
           "stringProperties": [],
@@ -7766,7 +7538,7 @@
           "persistentUuid": "64c6463f-7214-40fa-8c81-8b573de42523",
           "width": 0,
           "x": -176,
-          "y": 176,
+          "y": 224,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -7782,7 +7554,7 @@
           "persistentUuid": "1449a119-6d4d-4646-bab7-5ce33b487fd8",
           "width": 0,
           "x": -112,
-          "y": 176,
+          "y": 224,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -7877,223 +7649,13 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "6b47c51e-a1d5-402b-86f2-ba4df124e00d",
-          "width": 0,
-          "x": 1072,
-          "y": 256,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "7f4936b1-9895-4a50-a23f-7ed94ff4bc15",
-          "width": 0,
-          "x": 1136,
-          "y": 256,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "5ea2e027-e4a8-4443-aa84-aa108f7b1598",
-          "width": 0,
-          "x": 1136,
-          "y": 320,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "8b5fd97c-96b2-4296-8bef-47390fc021a9",
-          "width": 0,
-          "x": 1072,
-          "y": 320,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "8a0eac28-0bf8-429b-93cd-92296d9d0326",
-          "width": 0,
-          "x": 1072,
-          "y": 384,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "c14973a5-2f4d-4223-ba2a-0963de1f4d53",
-          "width": 0,
-          "x": 1136,
-          "y": 384,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "b1a5ae9a-b317-4de3-97b5-a225e6b7f67c",
-          "width": 0,
-          "x": 1136,
-          "y": 448,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "02dbe2ed-7d5c-476b-a3d7-c9bbc512d63d",
-          "width": 0,
-          "x": 1072,
-          "y": 448,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "e7537fbd-eab3-4ed7-8dd5-d2c79d89ca5a",
-          "width": 0,
-          "x": 1072,
-          "y": 512,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "37662d81-a1a3-4020-b9fe-ef1964c3c1c0",
-          "width": 0,
-          "x": 1136,
-          "y": 512,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "cc448f44-777c-4d9a-9c7a-4417add1824c",
-          "width": 0,
-          "x": 1008,
-          "y": 512,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "63d8bde3-5c34-4ea1-a236-57f5343d8902",
-          "width": 0,
-          "x": 944,
-          "y": 512,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "60791900-bd36-4718-b4bb-a0c9eaed5d35",
-          "width": 0,
-          "x": 880,
-          "y": 512,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "PositionPlaceholder",
-          "persistentUuid": "5cb3bd1e-831a-4b4b-8ced-d4438ccac8fa",
-          "width": 0,
-          "x": 816,
-          "y": 512,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
           "keepRatio": true,
           "layer": "",
           "name": "SarungTanganCard",
           "persistentUuid": "0b995d45-2465-4bfd-8bf3-a3d0e713ad2d",
           "width": 0,
           "x": -176,
-          "y": 432,
+          "y": 480,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -8109,7 +7671,7 @@
           "persistentUuid": "846a08f2-f23e-4d22-8fb9-0b7567fad99c",
           "width": 0,
           "x": -112,
-          "y": 432,
+          "y": 480,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -8125,7 +7687,7 @@
           "persistentUuid": "e7dd4397-f34c-478d-9ec2-2dcb12ceb902",
           "width": 0,
           "x": -176,
-          "y": 496,
+          "y": 544,
           "zOrder": 32,
           "numberProperties": [],
           "stringProperties": [],
@@ -8141,7 +7703,7 @@
           "persistentUuid": "f01884a2-945e-466f-8272-2d16a8c8fb97",
           "width": 0,
           "x": -112,
-          "y": 496,
+          "y": 544,
           "zOrder": 32,
           "numberProperties": [],
           "stringProperties": [],
@@ -8157,7 +7719,7 @@
           "persistentUuid": "4b8bd655-6e7e-4d49-b4e3-a7a6dbceb0ba",
           "width": 0,
           "x": -176,
-          "y": 560,
+          "y": 608,
           "zOrder": 33,
           "numberProperties": [],
           "stringProperties": [],
@@ -8173,7 +7735,7 @@
           "persistentUuid": "44046060-c4e5-48a4-9108-f9c68d22c2b4",
           "width": 0,
           "x": -112,
-          "y": 560,
+          "y": 608,
           "zOrder": 33,
           "numberProperties": [],
           "stringProperties": [],
@@ -8189,7 +7751,7 @@
           "persistentUuid": "02b32a39-2be5-4779-a3c1-90f8a4c058c8",
           "width": 0,
           "x": -176,
-          "y": 624,
+          "y": 672,
           "zOrder": 34,
           "numberProperties": [],
           "stringProperties": [],
@@ -8205,7 +7767,7 @@
           "persistentUuid": "45f85047-5461-46dd-90fe-ab48a74d3049",
           "width": 0,
           "x": -112,
-          "y": 624,
+          "y": 672,
           "zOrder": 34,
           "numberProperties": [],
           "stringProperties": [],
@@ -8221,7 +7783,7 @@
           "persistentUuid": "ad8c417e-2d3c-4456-890d-8ccdaee80776",
           "width": 0,
           "x": -176,
-          "y": 688,
+          "y": 736,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -8237,7 +7799,7 @@
           "persistentUuid": "385d979b-cbb1-47fd-8272-640bd6b74b05",
           "width": 0,
           "x": -112,
-          "y": 688,
+          "y": 736,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -8253,7 +7815,7 @@
           "persistentUuid": "11d47c66-8423-43da-bdf2-3ff67fc0bf78",
           "width": 0,
           "x": -176,
-          "y": 752,
+          "y": 800,
           "zOrder": 36,
           "numberProperties": [],
           "stringProperties": [],
@@ -8269,7 +7831,7 @@
           "persistentUuid": "77716941-4857-4f95-84e2-19cbb710213d",
           "width": 0,
           "x": -112,
-          "y": 752,
+          "y": 800,
           "zOrder": 36,
           "numberProperties": [],
           "stringProperties": [],
@@ -8285,7 +7847,7 @@
           "persistentUuid": "6da6c368-f289-4444-bba4-4358f253c462",
           "width": 0,
           "x": -176,
-          "y": 816,
+          "y": 864,
           "zOrder": 37,
           "numberProperties": [],
           "stringProperties": [],
@@ -8301,7 +7863,7 @@
           "persistentUuid": "46cae0c5-27cc-4f76-88e9-05f658b2bfee",
           "width": 0,
           "x": -112,
-          "y": 816,
+          "y": 864,
           "zOrder": 37,
           "numberProperties": [],
           "stringProperties": [],
@@ -8440,6 +8002,11 @@
               "name": "desc",
               "type": "string",
               "value": "Kardus adalah bahan utama, perlu alat lain seperti gunting, lem, dan lain-lain supaya lebih berguna"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -8584,6 +8151,11 @@
               "name": "desc",
               "type": "string",
               "value": "Cutter dipakai untuk memotong bagian suatu bahan"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -8728,6 +8300,11 @@
               "name": "desc",
               "type": "string",
               "value": "Gunting dipakai untuk memotong bagian suatu bahan"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -8872,6 +8449,11 @@
               "name": "desc",
               "type": "string",
               "value": "Kertas bisa dipakai untuk membuat rancangan mainan"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -9016,6 +8598,11 @@
               "name": "desc",
               "type": "string",
               "value": "Lakban bisa dipakai jika tidak ada lem, tapi terkadang kurang efektif"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -9160,6 +8747,11 @@
               "name": "desc",
               "type": "string",
               "value": "Lem dipakai untuk merekatkan bahan-bahan seperti kardus, hati-hati saat memakai lem"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -9304,6 +8896,11 @@
               "name": "desc",
               "type": "string",
               "value": "Penggaris dipakai untuk membantu menggambar garis atau bentuk lain"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -9448,6 +9045,11 @@
               "name": "desc",
               "type": "string",
               "value": "Sarung Tangan dipakai supaya lebih aman saat memakai lem atau memotong sesuatu"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -9660,8 +9262,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 160
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9677,8 +9279,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 160
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9694,8 +9296,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 160
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9711,8 +9313,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 160
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9728,8 +9330,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 160
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9745,8 +9347,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 160
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9762,8 +9364,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 160
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -9779,8 +9381,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 160,
+                        "y": 160
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -10051,7 +9653,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "images\\card_back.png",
+                      "image": "assets\\back.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -10067,20 +9669,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 2,
-                            "y": 1
+                            "x": 4,
+                            "y": 4
                           },
                           {
-                            "x": 62,
-                            "y": 1
+                            "x": 60,
+                            "y": 4
                           },
                           {
-                            "x": 62,
-                            "y": 63
+                            "x": 60,
+                            "y": 60
                           },
                           {
-                            "x": 2,
-                            "y": 63
+                            "x": 4,
+                            "y": 60
                           }
                         ]
                       ]
@@ -10194,6 +9796,11 @@
               "name": "desc",
               "type": "string",
               "value": "Botol (plastik) bisa dipakai untuk membuat bagian transparan seperti kaca"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -10338,6 +9945,11 @@
               "name": "desc",
               "type": "string",
               "value": "Spidol bisa dipakai untuk menggambar bagian yang akan dipotong"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -10482,6 +10094,11 @@
               "name": "desc",
               "type": "string",
               "value": "Spidol Berwarna dipakai untuk menghias mainan"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -10626,6 +10243,11 @@
               "name": "desc",
               "type": "string",
               "value": "Stik dipakai untuk membuat bagian yang lebih kuat dari kardus, seperti kerangka"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -10770,6 +10392,11 @@
               "name": "desc",
               "type": "string",
               "value": "Tusuk Sate bisa dipakai untuk membuat bagian yang bisa diputar, seperti baling-baling atau bagian yang menghubungkan roda"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -10914,6 +10541,11 @@
               "name": "desc",
               "type": "string",
               "value": "Tutup botol bisa dipakai untuk membuat roda daripada memakai roda dari kardus"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -11178,6 +10810,11 @@
               "name": "desc",
               "type": "string",
               "value": "Sedotan bisa dipakai untuk membuat bagian yang bisa diputar, seperti baling-baling atau bagian yang menyangga roda"
+            },
+            {
+              "name": "picked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -11847,7 +11484,6 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -11946,79 +11582,121 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Replace every placeholder with a random card."
+                  "comment": "Adaptive grid placement"
                 },
                 {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Card",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "AjoutHasard"
-                      },
-                      "parameters": [
-                        "",
-                        "PositionPlaceholder"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-                      },
-                      "parameters": [
-                        "Card",
-                        "Tween",
-                        "\"FlyIn\"",
-                        "PositionPlaceholder.X()",
-                        "PositionPlaceholder.Y()",
-                        "\"easeOutSine\"",
-                        "1",
-                        "no"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "PositionPlaceholder",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "value": "Wait"
+                        "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "2"
+                        "column",
+                        "=",
+                        "min(max(ceil((currLevel * 2) / 5), 2) + mod(max(ceil((currLevel * 2) / 5), 2), 2), 6)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "rows",
+                        "=",
+                        "clamp(ceil((currLevel * 2) / 5), 2, 5)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "cardCount",
+                        "=",
+                        "column * rows"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "paddingX",
+                        "=",
+                        "(Board.Width() - (column * cellSize + (column - 1))) / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "paddingY",
+                        "=",
+                        "(Board.Width() - (rows * cellSize + (rows - 1))) / 2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "paddingX",
+                        "\"info\"",
+                        ""
                       ]
                     }
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "Card",
                       "conditions": [],
-                      "actions": [
+                      "actions": [],
+                      "events": [
                         {
-                          "type": {
-                            "value": "ThreeDFlip::ThreeDFlip::FlipToSecond"
-                          },
-                          "parameters": [
-                            "Card",
-                            "ThreeDFlip",
-                            "yes",
-                            "0.5",
-                            ""
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "i",
+                                ">",
+                                "(column * rows) - 1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "Card",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "i",
+                                "+",
+                                "1"
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -12029,15 +11707,214 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanVariable"
+                            "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "isAllCardFlipped",
-                            "True",
-                            ""
+                            "i",
+                            "=",
+                            "0"
                           ]
                         }
                       ]
+                    },
+                    {
+                      "infiniteLoopWarning": true,
+                      "type": "BuiltinCommonInstructions::While",
+                      "whileConditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "i",
+                            "<=",
+                            "cardCount - 1"
+                          ]
+                        }
+                      ],
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "infiniteLoopWarning": true,
+                          "type": "BuiltinCommonInstructions::While",
+                          "whileConditions": [
+                            {
+                              "type": {
+                                "value": "AjoutHasard"
+                              },
+                              "parameters": [
+                                "",
+                                "Card"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Card",
+                                "picked",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "col",
+                                "=",
+                                "mod(i, column) - floor(column / 2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "row",
+                                "=",
+                                "floor(i / column) - floor(rows / 2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                              },
+                              "parameters": [
+                                "Card",
+                                "Tween",
+                                "\"fly\"",
+                                "Board.X() + paddingX + (col * cellSize)",
+                                "Board.Y() + paddingY + (row * cellSize)",
+                                "\"easeOutSine\"",
+                                "0.5",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Card",
+                                "picked",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "i",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "2"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Card",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ThreeDFlip::ThreeDFlip::FlipToSecond"
+                              },
+                              "parameters": [
+                                "Card",
+                                "ThreeDFlip",
+                                "yes",
+                                "0.5",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "isAllCardFlipped",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "column",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "rows",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "cellSize",
+                      "type": "number",
+                      "value": 64
+                    },
+                    {
+                      "name": "i",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "col",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "row",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "paddingX",
+                      "type": "number",
+                      "value": 16
+                    },
+                    {
+                      "name": "paddingY",
+                      "type": "number",
+                      "value": 0
                     }
                   ]
                 }
@@ -12170,6 +12047,7 @@
                   "comment": "The second card has been revealed, wait a moment and turn cards again"
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
